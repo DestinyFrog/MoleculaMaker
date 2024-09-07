@@ -1,0 +1,572 @@
+[
+	{
+		"nome": "hidróxido de lítio",
+		"formula": "LiOH",
+		"atomos": [
+			{
+				"simbolo": "Li",
+				"geometria": "angular V",
+				"carga": 1,
+				"ligacoes": [
+					{
+						"para": 1,
+						"eletrons": 1,
+						"tipo": "iônica"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 2,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			}
+		]
+	},
+	{
+		"nome": "hidróxido de berílio",
+		"formula": "Be(OH)_2",
+		"atomos": [
+			{
+				"simbolo": "Be",
+				"geometria": "linear",
+				"carga": 2,
+				"ligacoes": [
+					{
+						"para": 1,
+						"eletrons": 1,
+						"tipo": "iônica"
+					},
+					{
+						"para": 2,
+						"eletrons": 1,
+						"tipo": "iônica"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 3,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 4,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			}
+		]
+	},
+	{
+		"nome": "hidróxido de sódio",
+		"formula": "NaOH",
+		"atomos": [
+			{
+				"simbolo": "Na",
+				"geometria": "angular V",
+				"carga": 1,
+				"ligacoes": [
+					{
+						"para": 1,
+						"eletrons": 1,
+						"tipo": "iônica"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 2,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			}
+		]
+	},
+	{
+		"nome": "hidróxido de magnésio",
+		"formula": "Mg(OH)_2",
+		"atomos": [
+			{
+				"simbolo": "Mg",
+				"geometria": "linear",
+				"carga": 2,
+				"ligacoes": [
+					{
+						"para": 1,
+						"eletrons": 1,
+						"tipo": "iônica"
+					},
+					{
+						"para": 2,
+						"eletrons": 1,
+						"tipo": "iônica"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 3,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 4,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			}
+		]
+	},
+	{
+		"nome": "hidróxido de potássio",
+		"formula": "KOH",
+		"atomos": [
+			{
+				"simbolo": "K",
+				"geometria": "angular V",
+				"carga": 1,
+				"ligacoes": [
+					{
+						"para": 1,
+						"eletrons": 1,
+						"tipo": "iônica"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 2,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			}
+		]
+	},
+	{
+		"nome": "hidróxido de cálcio",
+		"formula": "Ca(OH)_2",
+		"atomos": [
+			{
+				"simbolo": "Ca",
+				"geometria": "linear",
+				"carga": 2,
+				"ligacoes": [
+					{
+						"para": 1,
+						"eletrons": 1,
+						"tipo": "iônica"
+					},
+					{
+						"para": 2,
+						"eletrons": 1,
+						"tipo": "iônica"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 3,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 4,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			}
+		]
+	},
+	{
+		"nome": "hidróxido de rubídio",
+		"formula": "RbOH",
+		"atomos": [
+			{
+				"simbolo": "Rb",
+				"geometria": "angular V",
+				"carga": 1,
+				"ligacoes": [
+					{
+						"para": 1,
+						"eletrons": 1,
+						"tipo": "iônica"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 2,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			}
+		]
+	},
+	{
+		"nome": "hidróxido de estrôncio",
+		"formula": "Sr(OH)_2",
+		"atomos": [
+			{
+				"simbolo": "Sr",
+				"geometria": "linear",
+				"carga": 2,
+				"ligacoes": [
+					{
+						"para": 1,
+						"eletrons": 1,
+						"tipo": "iônica"
+					},
+					{
+						"para": 2,
+						"eletrons": 1,
+						"tipo": "iônica"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 3,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 4,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			}
+		]
+	},
+	{
+		"nome": "hidróxido de césio",
+		"formula": "CsOH",
+		"atomos": [
+			{
+				"simbolo": "Cs",
+				"geometria": "angular V",
+				"carga": 1,
+				"ligacoes": [
+					{
+						"para": 1,
+						"eletrons": 1,
+						"tipo": "iônica"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 2,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			}
+		]
+	},
+	{
+		"nome": "hidróxido de bário",
+		"formula": "Ba(OH)_2",
+		"atomos": [
+			{
+				"simbolo": "Ba",
+				"geometria": "linear",
+				"carga": 2,
+				"ligacoes": [
+					{
+						"para": 1,
+						"eletrons": 1,
+						"tipo": "iônica"
+					},
+					{
+						"para": 2,
+						"eletrons": 1,
+						"tipo": "iônica"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 3,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 4,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			}
+		]
+	},
+	{
+		"nome": "hidróxido de frâncio",
+		"formula": "FrOH",
+		"atomos": [
+			{
+				"simbolo": "Fr",
+				"geometria": "angular V",
+				"carga": 1,
+				"ligacoes": [
+					{
+						"para": 1,
+						"eletrons": 1,
+						"tipo": "iônica"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 2,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			}
+		]
+	},
+	{
+		"nome": "hidróxido de rádio",
+		"formula": "Ra(OH)_2",
+		"atomos": [
+			{
+				"simbolo": "Ra",
+				"geometria": "linear",
+				"carga": 2,
+				"ligacoes": [
+					{
+						"para": 1,
+						"eletrons": 1,
+						"tipo": "iônica"
+					},
+					{
+						"para": 2,
+						"eletrons": 1,
+						"tipo": "iônica"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 3,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "O",
+				"geometria": null,
+				"carga": -1,
+				"ligacoes": [
+					{
+						"para": 4,
+						"eletrons": 1,
+						"tipo": "covalente"
+					}
+				]
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			},
+			{
+				"simbolo": "H",
+				"geometria": null,
+				"carga": 0,
+				"ligacoes": []
+			}
+		]
+	}
+]
