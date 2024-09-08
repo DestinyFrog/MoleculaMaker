@@ -1,4 +1,5 @@
 import File from "../file.js"
+import Molecula from "../molecula.js"
 
 function remove_prefix(nome) {
 	let prefix = nome
@@ -22,58 +23,55 @@ function remove_prefix(nome) {
 }
 
 class Acidos {
+	static hidracido_halogenio({nome, simbolo}) {
+		const mol = new Molecula( `ácido ${remove_prefix(nome)}ídrico`, `H${simbolo}`)
+		mol.adicionarNome(`${remove_prefix(nome)}eto de hidrogênio`)
+		mol.adicionarCaracterística('ácido')
+		mol.adicionarCaracterística('hidrácido')
+		mol.adicionarCaracterística(`${remove_prefix(nome)}eto`)
+		mol.adicionarCaracterística('hidreto')
 
-	static hidracido({nome, simbolo}) {
-		return {
-			nome: `ácido ${remove_prefix(nome)}ídrico`,
-			formula: `H${simbolo}`,
-			atomos: [
-				{
-					"simbolo": simbolo,
-					"geometria": "binaria",
-					"carga": -1,
-					"ligacoes": [
-						{"para":1, "eletrons":1, "tipo": "iônica"}
-					]
-				},
-				{
-					"simbolo": "H",
-					"carga": 1
-				}
-			]
-		}
+		mol.conectarAtomo(
+			mol.adicionarAtomo(simbolo, -1, 'binaria'),
+			mol.adicionarAtomo("H", 1)
+		, 1, 'iônica')
+
+		return mol
 	}
 
-	static acido_per_17_ico({nome, simbolo}) {
-		return {
-			nome: `ácido per${remove_prefix(nome)}ico`,
-			formula: `H${simbolo}O_4`,
-			atomos: [
-				{
-					"simbolo": simbolo,
-					"geometria": "tetraédrica",
-					"ligacoes": [
-						{"para":1, "eletrons":2, "tipo": "covalente dativa"},
-						{"para":2, "eletrons":2, "tipo": "covalente dativa"},
-						{"para":3, "eletrons":2, "tipo": "covalente dativa"},
-						{"para":4, "eletrons":1, "tipo": "covalente"}
-					]
-				},
-				{"simbolo": "O"},
-				{"simbolo": "O"},
-				{"simbolo": "O"},
-				{
-					"simbolo": "O",
-					"geometria": "angular V",
-					"ligacoes": [
-						{"para":5, "eletrons":1, "tipo": "covalente"},
-					]
-				},
-				{"simbolo": "H"}
-			]
-		}
+	static hidracido_16({nome, simbolo}) {
+		const mol = new Molecula( `ácido ${remove_prefix(nome)}ídrico`, `H_2${simbolo}`)
+		mol.adicionarNome(`${remove_prefix(nome)}eto de hidrogênio`)
+		mol.adicionarCaracterística('ácido')
+		mol.adicionarCaracterística('hidrácido')
+		mol.adicionarCaracterística(`${remove_prefix(nome)}eto`)
+		mol.adicionarCaracterística('hidreto')
+
+		const f1 = mol.adicionarAtomo(simbolo, -2, 'angular')
+
+		mol.conectarAtomo( f1, mol.adicionarAtomo("H", 1) , 1, 'iônica')
+		mol.conectarAtomo( f1, mol.adicionarAtomo("H", 1) , 1, 'iônica')
+
+		return mol
 	}
 
+	static acido_halogenio_ico({nome, simbolo}) {
+		const mol = new Molecula(`ácido ${remove_prefix(nome)}ico`, `H${simbolo}O_3`)
+		mol.adicionarCaracterística('ácido')
+		mol.adicionarCaracterística('oxiácido')
+
+		const f1 = mol.adicionarAtomo(simbolo, -1, 'piramidal')
+		mol.conectarAtomo( f1, mol.adicionarAtomo("O") , 2, 'covalente dativa')
+		mol.conectarAtomo( f1, mol.adicionarAtomo("O") , 2, 'covalente dativa')
+
+		const f2 = mol.adicionarAtomo("O", 1, 'angular V')
+		mol.conectarAtomo( f1, f2, 1, 'covalente')
+		mol.conectarAtomo( f2, mol.adicionarAtomo("H") , 1, 'covalente')
+
+		return mol
+	}
+
+	/*
 	static acido_17_ico({nome, simbolo}) {
 		return {
 			nome: `ácido ${remove_prefix(nome)}ico`,
@@ -278,16 +276,35 @@ class Acidos {
 			]
 		}
 	}
+	*/
 
 	static Update() {
+		const data = []
+
 		File.data.forEach( (d) => {
 			if (d.simbolo == "O") return
 
-			if (d.categoria == "halogênio" && d.simbolo != 'At') {
-				const m = Acidos.hidracido(d)
-				File.final_data.push(m)
-			}
+			if (d.categoria == "halogênio" && d.simbolo != 'At')
+				data.push( Acidos.hidracido_halogenio(d) )
 
+			if (d.categoria == "ametal" && d.familia == 16)
+				data.push( Acidos.hidracido_16(d) )
+
+			if ( (
+				d.categoria == 'metaloide' ||
+				d.categoria == 'ametal' ||
+				d.categoria == 'halogênio') )
+			{
+				switch (d.familia) {
+					case 17:
+						File.final_data.push( this.acido_halogenio_ico(d) )
+						break
+				}
+			}
+		})
+
+		return data
+		File.data.forEach( (d) => {
 			if ( (
 				d.categoria == 'metaloide' ||
 				d.categoria == 'ametal' ||

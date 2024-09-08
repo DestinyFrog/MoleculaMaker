@@ -6,11 +6,11 @@ class Bases {
 		const mol = new Molecula(`hidróxido de ${nome}`, `${simbolo}OH`)
 		mol.adicionarCaracterística('base')
 
-		const f1 = mol.adicionarAtomo(simbolo, 1, 'angular V')
-		const f2 = mol.adicionarAtomo("O", -1)
+		const f1 = mol.adicionarAtomo("O", -1, 'angular V')
+		const f2 = mol.adicionarAtomo(simbolo, 1)
 		const f3 = mol.adicionarAtomo("H")
 		mol.conectarAtomo(f1, f2, 1, 'iônica')
-		mol.conectarAtomo(f2, f3)
+		mol.conectarAtomo(f1, f3)
 		return mol
 	}
 
@@ -19,8 +19,8 @@ class Bases {
 		mol.adicionarCaracterística('base')
 
 		const f1 = mol.adicionarAtomo(simbolo, 2, 'linear')
-		const f2 = mol.adicionarAtomo("O", -1)
-		const f3 = mol.adicionarAtomo("O", -1)
+		const f2 = mol.adicionarAtomo("O", -1, "angular V")
+		const f3 = mol.adicionarAtomo("O", -1, "angular V")
 
 		mol.conectarAtomo(f1, f2, 1, 'iônica')
 		mol.conectarAtomo(f1, f3, 1, 'iônica')
