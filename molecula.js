@@ -5,10 +5,17 @@ class Molecula {
 	 * @param {string} formula
 	 */
 	constructor(nome, formula) {
-		this.nome = nome
+		this.nome = [ nome ]
 		this.formula = formula
 		this.atomos = []
 		this.caracteristicas = []
+	}
+
+	/**
+	 * @param {string} nome
+	 */
+	adicionarNome(nome) {
+		this.nome.push(nome)
 	}
 
 	/**
@@ -21,7 +28,7 @@ class Molecula {
 	/**
 	 * 
 	 * @param {string} simbolo 
-	 * @param { ('linear'|'angular'|'angular V') } geometria 
+	 * @param { ('linear'|'angular'|'angular V'|'binaria'|'piramidal'|'trigonal plana'|'tetraédrica') } geometria 
 	 * @param {number} carga 
 	 * @returns {number} indice
 	 */
@@ -49,6 +56,7 @@ class Molecula {
 		return {
 			nome: this.nome,
 			formula: this.formula,
+			caracteristicas: this.caracteristicas,
 			atomos: this.atomos
 		}
 	}
