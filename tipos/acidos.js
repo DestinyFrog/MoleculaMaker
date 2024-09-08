@@ -6,7 +6,6 @@ function remove_prefix(nome) {
 
 	if (nome == 'enxofre')
 		prefix = 'sulfur'
-
 	else if (nome == 'nitrogênio')
 		prefix = 'nitr'
 
@@ -67,7 +66,50 @@ class Acidos {
 		const f2 = mol.adicionarAtomo("O", 1, 'angular V')
 		mol.conectarAtomo( f1, f2, 1, 'covalente')
 		mol.conectarAtomo( f2, mol.adicionarAtomo("H") , 1, 'covalente')
+		return mol
+	}
+	
+	static acido_calcogenio_ico({nome, simbolo}) {
+		const mol = new Molecula(`ácido ${remove_prefix(nome)}ico`, `H_2${simbolo}O_4`)
+		mol.adicionarCaracterística('ácido')
+		mol.adicionarCaracterística('oxiácido')
 
+		const f1 = mol.adicionarAtomo(simbolo, -1, 'tetraédrica')
+
+
+		const f2 = mol.adicionarAtomo("O")
+		mol.conectarAtomo( f1, mol.adicionarAtomo("O") , 2, 'covalente dativa')
+
+		mol.conectarAtomo(f1, f2, 1, 'covalente')
+		mol.conectarAtomo(f2, mol.adicionarAtomo("H", 0, 'angular V') )
+
+		mol.conectarAtomo( f1, mol.adicionarAtomo("O") , 2, 'covalente dativa')
+
+		const f3 = mol.adicionarAtomo("O")
+		mol.conectarAtomo(f3, mol.adicionarAtomo("H", 0, 'angular V') )
+		mol.conectarAtomo(f1, f3, 1, 'covalente')
+		return mol
+	}
+
+		static acido_calcogenio_ico({nome, simbolo}) {
+		const mol = new Molecula(`ácido ${remove_prefix(nome)}ico`, `H_2${simbolo}O_4`)
+		mol.adicionarCaracterística('ácido')
+		mol.adicionarCaracterística('oxiácido')
+
+		const f1 = mol.adicionarAtomo(simbolo, -1, 'tetraédrica')
+
+
+		const f2 = mol.adicionarAtomo("O")
+		mol.conectarAtomo( f1, mol.adicionarAtomo("O") , 2, 'covalente dativa')
+
+		mol.conectarAtomo(f1, f2, 1, 'covalente')
+		mol.conectarAtomo(f2, mol.adicionarAtomo("H", 0, 'angular V') )
+
+		mol.conectarAtomo( f1, mol.adicionarAtomo("O") , 2, 'covalente dativa')
+
+		const f3 = mol.adicionarAtomo("O")
+		mol.conectarAtomo(f3, mol.adicionarAtomo("H", 0, 'angular V') )
+		mol.conectarAtomo(f1, f3, 1, 'covalente')
 		return mol
 	}
 
@@ -297,7 +339,11 @@ class Acidos {
 			{
 				switch (d.familia) {
 					case 17:
-						File.final_data.push( this.acido_halogenio_ico(d) )
+						data.push( this.acido_halogenio_ico(d) )
+						break
+
+					case 16:
+						data.push( this.acido_calcogenio_ico(d) )
 						break
 				}
 			}
