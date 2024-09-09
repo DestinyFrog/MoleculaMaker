@@ -14,6 +14,18 @@ class Oxidos {
 		return mol
 	}
 
+	static dioxido_de_halogenio({simbolo, nome}) {
+		const mol = new Molecula( `dióxido de ${nome}`, `${simbolo}O_2`)
+
+		mol.adicionarCaracterística('óxido')
+
+		const f1 = mol.adicionarAtomo("O", 0, 'angular V')
+
+		mol.conectarAtomo( f1, mol.adicionarAtomo(simbolo) )
+		mol.conectarAtomo( f1, mol.adicionarAtomo(simbolo) )
+		return mol
+	}
+
 	static dioxido_de_14({simbolo, nome}) {
 		const mol = new Molecula( `dióxido de ${nome}`, `${simbolo}_2O`)
 
@@ -26,14 +38,30 @@ class Oxidos {
 		return mol
 	}
 
+	static monoxido_de_calcogenios({simbolo, nome}) {
+		const mol = new Molecula( `monóxido de ${nome}`, `${simbolo}O`)
+		mol.adicionarCaracterística('óxido')
+		const f1 = mol.adicionarAtomo(simbolo, 0, 'linear')
+		mol.conectarAtomo( f1, mol.adicionarAtomo("O"), 2, 'covalente' )
+		return mol
+	}
+
 	static dioxido_de_calcogenios({simbolo, nome}) {
 		const mol = new Molecula( `dióxido de ${nome}`, `${simbolo}O_2`)
 		mol.adicionarCaracterística('óxido')
-
 		const f1 = mol.adicionarAtomo(simbolo, 0, 'angular V')
+		mol.conectarAtomo( f1, mol.adicionarAtomo("O"), 2, 'covalente' )
+		mol.conectarAtomo( f1, mol.adicionarAtomo("O"), 2, 'covalente dativa' )
+		return mol
+	}
 
-		mol.conectarAtomo( f1, mol.adicionarAtomo("O") )
-		mol.conectarAtomo( f1, mol.adicionarAtomo("O") )
+	static trioxido_de_calcogenios({simbolo, nome}) {
+		const mol = new Molecula( `trióxido de ${nome}`, `${simbolo}O_3`)
+		mol.adicionarCaracterística('óxido')
+		const f1 = mol.adicionarAtomo(simbolo, 0, 'trigonal plana')
+		mol.conectarAtomo( f1, mol.adicionarAtomo("O"), 2, 'covalente' )
+		mol.conectarAtomo( f1, mol.adicionarAtomo("O"), 2, 'covalente dativa' )
+		mol.conectarAtomo( f1, mol.adicionarAtomo("O"), 2, 'covalente dativa' )
 		return mol
 	}
 
@@ -48,7 +76,9 @@ class Oxidos {
 			}
 
 			if (d.familia == 16) {
+				data.push(  Oxidos.monoxido_de_calcogenios(d) )
 				data.push(  Oxidos.dioxido_de_calcogenios(d) )
+				data.push(  Oxidos.trioxido_de_calcogenios(d) )
 			}
 
 			if (d.familia == 14) {

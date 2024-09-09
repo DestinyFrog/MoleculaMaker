@@ -18,6 +18,25 @@ import fs from 'fs'
  * @prop {string} configuracao_eletronica Configuração Eletrônica no formato escrito
  */
 
+export function remove_prefix(nome) {
+	let prefix = nome
+
+	if (nome == 'enxofre')
+		prefix = 'sulfur'
+	else if (nome == 'nitrogênio')
+		prefix = 'nitr'
+
+	else {
+
+		if ( nome.endsWith("io") )
+			prefix = nome.slice(0,-2)
+		else if ( "aeiou".includes( nome[nome.length-1] ) )
+			prefix = nome.slice(0,-1)
+
+	}
+
+	return prefix
+}
 
 class File {
 	/**

@@ -28,7 +28,7 @@ class Molecula {
 	/**
 	 * 
 	 * @param {string} simbolo 
-	 * @param { ('linear'|'angular'|'angular V'|'binaria'|'piramidal'|'trigonal plana'|'tetraédrica') } geometria 
+	 * @param { ('linear'|'angular'|'angular V'|'linear'|'piramidal'|'trigonal plana'|'tetraédrica') } geometria 
 	 * @param {number} carga 
 	 * @returns {number} indice
 	 */

@@ -1,25 +1,6 @@
 import File from "../file.js"
 import Molecula from "../molecula.js"
-
-function remove_prefix(nome) {
-	let prefix = nome
-
-	if (nome == 'enxofre')
-		prefix = 'sulfur'
-	else if (nome == 'nitrogênio')
-		prefix = 'nitr'
-
-	else {
-
-		if ( nome.endsWith("io") )
-			prefix = nome.slice(0,-2)
-		else if ( "aeiou".includes( nome[nome.length-1] ) )
-			prefix = nome.slice(0,-1)
-
-	}
-
-	return prefix
-}
+import { remove_prefix } from "../file.js"
 
 class Acidos {
 	static hidracido_halogenio({nome, simbolo}) {
@@ -31,7 +12,7 @@ class Acidos {
 		mol.adicionarCaracterística('hidreto')
 
 		mol.conectarAtomo(
-			mol.adicionarAtomo(simbolo, -1, 'binaria'),
+			mol.adicionarAtomo(simbolo, -1, 'linear'),
 			mol.adicionarAtomo("H", 1)
 		, 1, 'iônica')
 
